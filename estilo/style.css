@@ -1,0 +1,91 @@
+@charset "UTF-8";
+@font-face {
+    font-family: Chord;
+    src: url("../fontes/Chord-Bold.ttf") format("opentype");
+}
+@font-face {
+    font-family: ClaustrumBleed;
+    src: url("../fontes/ClaustrumBold.ttf") format("opentype");
+}
+:root{
+    --font1:Chord;
+    --font2:ClaustrumBleed;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html, body{
+    min-height: 100vh;
+    background-color: darkgray;
+}
+header{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+header>h1{
+    font-family: var(--font1), Helvetica, sans-serif;
+    padding-top: 50px;
+    /*text-transform: uppercase;-Text transforme pode tonar as letras em Maiúscola(uppercase) ou em Minuscula(lowercase)*/
+    font-variant: small-caps;
+    font-size: 6vw;/*Vai se daptar consernente a largura da letra.*/
+}
+header>p{
+    padding-bottom: 50px;
+}
+header a, footer a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+header a:hover, footer a:hover{
+    text-decoration: underline;
+}
+section.normal{
+    background-color: white;
+    color: black;
+}
+section.imagem{
+    background-color: rgb(51, 51, 51);
+    color: white;
+    background-attachment: fixed;/*Torna a imagem fixa dando assim o efeito paralax nesta pagina*/
+}
+section{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em;
+    padding-left: 30px;
+    font-size: 1.5em;
+}
+section>p{
+    font-family: var(--font2),Arial, Helvetica, sans-serif;
+}
+section#p{
+    padding-bottom: 20em;
+}
+section#ing01{
+    background-image: url("../imagens/background001.jpg");
+    background-position: center right;
+    background-size: cover;
+}
+section#ing02{
+    background-image: url("../imagens/background002.jpg");
+    background-position: center right;
+    background-size: cover;
+}
+section.imagem>p{
+    box-shadow: inset 6px 6px 13px 0px  rgba(0, 0, 0, 0.623);
+    display: inline-block;
+    /*Criando um bloco dentro do nosso paragrafo*/
+    background-color: rgba(0, 0, 0, 0.432);
+    padding-left: 7px;
+    padding-right: 7px;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.464);  
+}
+footer{
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
